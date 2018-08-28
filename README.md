@@ -11,3 +11,5 @@ Spring SpringMVC Mybatis 模板代码生成
 2.CodeGenerator类 g.generateByTable("table表名","table表名"); 支持批量和单表 
 
 3.main方法运行CodeGenerator类, 在配置的outRoot输出路径找到生成代码, 复制到对应项目包下. 页面${page.list}获取绑定值.
+
+from https://gitee.com/houfeng30920/codefactory/tree/master/
