@@ -1,22 +1,52 @@
 package cn.org.rapid_framework.generator;
 
+import cn.org.rapid_framework.generator.Generator.GeneratorModel;
 import cn.org.rapid_framework.generator.GeneratorFacade;
 
 public class CodeGenerator {
 	
 	public static void main(String[] args) throws Exception {
-		//Ä£°åÂ·¾¶
-		String templatePath = "F:/0-code-space/coderFactory/WebRoot/template";
+		
+		//createProject();
+		
+		addProjectMethod();
+	}
+	/*
+	 * æ–°å»ºä¸€ä¸ªé¡¹ç›®
+	 */
+	public static void createProject() throws Exception {
+		//æ¨¡æ¿è·¯å¾„
+		String templatePath = "C:/Users/admin/git/codefactory/template/demo";
 		GeneratorFacade g = new GeneratorFacade();
 		g.getGenerator().addTemplateRootDir(templatePath);
-		// É¾³ıÉú³ÉÆ÷µÄÊä³öÄ¿Â¼
+		// åˆ é™¤ç”Ÿæˆå™¨çš„è¾“å‡ºç›®å½•
 		//g.deleteOutRootDir();
-		// Í¨¹ıÊı¾İ¿â±íÉú³ÉÎÄ¼ş
-		g.generateByTable("ngcs_yst");
+		// é€šè¿‡æ•°æ®åº“è¡¨ç”Ÿæˆæ–‡ä»¶
+		g.generateByTable("tb_user");
 
-		// ×Ô¶¯ËÑË÷Êı¾İ¿âÖĞµÄËùÓĞ±í²¢Éú³ÉÎÄ¼ş,templateÎªÄ£°åµÄ¸ùÄ¿Â¼
+		// è‡ªåŠ¨æœç´¢æ•°æ®åº“ä¸­çš„æ‰€æœ‰è¡¨å¹¶ç”Ÿæˆæ–‡ä»¶,templateä¸ºæ¨¡æ¿çš„æ ¹ç›®å½•
 		// g.generateByAllTable();
-		// °´tableÃû×ÖÉ¾³ıÎÄ¼ş
+		// æŒ‰tableåå­—åˆ é™¤æ–‡ä»¶
 		// g.deleteByTable("table_name", "template");
 	}
+	
+	
+	public static void addProjectMethod() throws Exception {
+		
+		//æ¨¡æ¿è·¯å¾„
+		String templatePath = "C:\\Users\\admin\\git\\codefactory\\template\\mytemplate\\";
+		GeneratorFacade g = new GeneratorFacade();
+		g.getGenerator().addTemplateRootDir(templatePath);
+		// åˆ é™¤ç”Ÿæˆå™¨çš„è¾“å‡ºç›®å½•
+		//g.deleteOutRootDir();
+		
+		// è‡ªå®šä¹‰ç”Ÿæˆçš„å‚æ•°
+		GeneratorModel gm=new GeneratorModel();
+		//gm.filePathModel.put(key, value);
+		gm.templateModel.put("methodName", "addArticleAll");
+		
+		g.generateBy(gm);
+		
+	}
+	
 }

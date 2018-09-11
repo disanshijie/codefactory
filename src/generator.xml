@@ -12,10 +12,11 @@
     <!-- jsp namespace: web/${namespace}/${className}/list.jsp -->  
     <entry key="namespace">pages</entry>  
       
-    <entry key="outRoot">\generator-output</entry>
+<!--     <entry key="outRoot">\generator-output</entry> -->
+    <entry key="outRoot">D:/opt/freemark/ssm_project</entry>
   
     <!-- 需要移除的表名前缀,使用逗号进行分隔多个前缀,示例值: t_,v_ -->  
-    <entry key="tableRemovePrefixes"></entry>  
+    <entry key="tableRemovePrefixes">tb_</entry>
       
     <entry key="jdbc_username">root</entry>  
     <entry key="jdbc_password">root</entry>  
@@ -37,7 +38,7 @@
     <entry key="jdbc.driver">org.h2.Driver</entry>  
     -->  
           
-    <entry key="jdbc_url">jdbc:mysql://localhost:3306/ngcs?useUnicode=true&amp;characterEncoding=UTF-8</entry>  
+    <entry key="jdbc_url">jdbc:mysql://localhost:3306/tokenknow?useUnicode=true&amp;characterEncoding=UTF-8</entry>  
     <entry key="jdbc_driver">com.mysql.jdbc.Driver</entry>  
   
     <!-- Oracle  jdbc:oracle:oci:@tnsname_devdb  
